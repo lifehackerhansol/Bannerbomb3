@@ -553,9 +553,7 @@ Result render(int cursor){
 	renderString("  Install      unSAFE_MODE", 0, y);
 	renderString("    Uninstall  unSAFE_MODE", 0, y+8);
 	renderString("  Dump DSiWare (fredtool)", 0, y+16);
-	renderString("  Install      *HAX       ", 0, y+24);
-	renderString("    Uninstall  *HAX       ", 0, y+32);
-	renderString("  Exit                   ", 0, y+40);
+	renderString("  Exit                   ", 0, y+24);
 	renderString("->", 0, y+(cursor*8));
 	return 0;
 }
@@ -782,7 +780,7 @@ int main(int loaderparam, char** argv)
 		reboot:
 		renderString("Rebooting now...", 10, y+=10);
 		break;
-		
+		/*
 		case 3:
 		if(!iscfw){
 			menuhax67(t.version);
@@ -807,7 +805,8 @@ int main(int loaderparam, char** argv)
 		renderString("Rebooting now...       ", 0, 22*8);
 		svc_sleepThread(2000*1000*1000);
 		break;
-		case 5:
+		*/
+		case 3:  //5
 		renderString("Rebooting now...       ", 0, 20*8);
 		svc_sleepThread(2000*1000*1000);
 		break;
