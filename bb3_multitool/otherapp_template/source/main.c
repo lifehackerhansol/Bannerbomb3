@@ -677,13 +677,13 @@ int main(int loaderparam, char** argv)
 	//gHandle=aptr;
 	
 	res = _srv_getServiceHandle(&srvHandle, &amHandle, "am:net");	
-	if(!res) iscfw=1;
-	else {
+	//if(!res) iscfw=1;
+	//else {
 		res = _srv_getServiceHandle(&srvHandle, &amHandle, "am:sys");	
 		renderString("am:sys    ", 0, y+0*8);
 		drawHex(res, 8*8, y+0*8); //ns:s get result
-	}
-	
+	//}
+	iscfw = 0;
 	//_initSrv(&nptr);
 	res = _srv_getServiceHandle(&srvHandle, &nsHandle, "ns:s");
 	renderString("ns:s    ", 0, y+1*8);
